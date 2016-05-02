@@ -11,3 +11,9 @@ If the file is a template an `instance` parameter should be set to specify to ge
 
 ## file storage
 The cloud-config files should be stored in the `data/` folder of the application
+
+# TODO
+If anyone wants to contribute to the project:
+ - code server
+ - dockerize it
+ - add SSL support
