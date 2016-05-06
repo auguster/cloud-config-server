@@ -1,6 +1,9 @@
 #cloud-config
-<% var host = host || 'host' -%>
-<% var domain = domain ? '.' + domain : '' -%>
+<%
+var host = host || 'host';
+var domain = domain ? '.' + domain : '';
+var bootstrap = bootstrap || false;
+-%>
 hostname: "<%= host %><%= domain %>"
 
 ssh_authorized_keys:
