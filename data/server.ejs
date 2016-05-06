@@ -1,0 +1,15 @@
+#cloud-config
+<% var host = host || 'host' -%>
+<% var domain = domain ? '.' + domain : '' -%>
+hostname: "<%= host %><%= domain %>"
+
+ssh_authorized_keys:
+  <% include partials/ssh_keys/main %>
+
+coreos:
+  update:
+    reboot-strategy: best-effort
+<% include partials/etcd %>
+  units:
+<% include partials/units/etcd2_unit.ejs %>
+<% include partials/units/fleet_unit.ejs %>

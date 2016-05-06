@@ -15,10 +15,30 @@ The cloud-config files should be stored in the `data/` folder of the application
 ## templating
 This server uses [EJS](http://ejs.co) for file templating. This allows code factoring (through includes), variables, dynamic scripting...
 
+Here is a [working example](tree/master/data) of what you can do:
+```
+#cloud-config
+<% var host = host || 'host' -%>
+<% var domain = domain ? '.' + domain : '' -%>
+hostname: "<%= host %><%= domain %>"
+
+ssh_authorized_keys:
+  <% include partials/ssh_keys/main %>
+
+coreos:
+  update:
+    reboot-strategy: best-effort
+<% include partials/etcd %>
+  units:
+<% include partials/units/etcd2_unit.ejs %>
+<% include partials/units/fleet_unit.ejs %>
+```
+Be aware that cloud-config files are writen in YAML which are space-indentation sensitive !
+
 # TODO
 If anyone wants to contribute to the project:
- - code server
- - templating
+ - ~~code server~~
+ - ~~templating~~
  - dockerize it
  - add SSL support
  
