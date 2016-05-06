@@ -1,10 +1,11 @@
 #cloud-config
 <%
 var host = host || 'host';
-var domain = domain ? '.' + domain : '';
+var ddomain = domain ? '.' + domain : '';
+var domain = domain || '';
 var bootstrap = bootstrap || false;
 -%>
-hostname: "<%= host %><%= domain %>"
+hostname: "<%= host %><%= ddomain %>"
 
 ssh_authorized_keys:
   <% include partials/ssh_keys/main %>
