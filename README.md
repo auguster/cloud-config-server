@@ -1,20 +1,24 @@
 # cloud-config-server
-Docker NodeJS server providing cloud-config to CoreOS instances
+Docker NodeJS server providing cloud-config to Cloud instances using [EJS](http://ejs.co) template language
 
 # user manual
 
 ## file query
 The cloud-config file is queried through a `GET HTTP` request containing a `config` parameter containing the name of the file to serve.
-If the file is a template an `instance` parameter should be set to specify to generate the file.
+If the file is an EJS template you can give any parameters you want through `GET` parameters to generate the file.
 
-`http://<server>:<port>/<filename>?instance=<number>`
+`http://<server>:<port>/<filename>?<params ...>`
 
 ## file storage
-The cloud-config files should be stored in the `data/` folder of the application
+The cloud-config files should be stored in the `data/` folder of the application bearing '.ejs' as extension.
+
+## templating
+This server uses [EJS](http://ejs.co) for file templating. This allows code factoring (through includes), variables, dynamic scripting...
 
 # TODO
 If anyone wants to contribute to the project:
  - code server
+ - templating
  - dockerize it
  - add SSL support
  
