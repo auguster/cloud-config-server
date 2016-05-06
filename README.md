@@ -34,6 +34,7 @@ coreos:
 <% include partials/units/fleet_unit.ejs %>
 ```
 Be aware that cloud-config files are writen in YAML which are space-indentation sensitive !
+A more complete example can be found in the project [coreos-consul-haproxy](https://github.com/auguster/coreos-consul-haproxy).
 
 ## building
 To build the docker image run:
