@@ -38,7 +38,6 @@ Be aware that cloud-config files are writen in YAML which are space-indentation 
 ## building
 To build the docker image run:
 ```
-npm install
 docker build -t cloud-config-server .
 ```
 
