@@ -2,7 +2,7 @@
     name: <%= host ? host : 'host' %>
     discovery-srv: <%= domain %>
     initial-cluster-state: existing
-    initial-advertise-peer-urls: http://<%= host %><%= domain %>":2380
+    initial-advertise-peer-urls: http://<%= host %><%= domain %>:2380
     advertise-client-urls: http://<%= host %><%= domain %>":2379
     listen-client-urls: "http://0.0.0.0:2379,http://0.0.0.0:4001"
     listen-peer-urls: http://0.0.0.0:2380

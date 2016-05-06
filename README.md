@@ -35,12 +35,24 @@ coreos:
 ```
 Be aware that cloud-config files are writen in YAML which are space-indentation sensitive !
 
-# TODO
-If anyone wants to contribute to the project:
- - ~~code server~~
- - ~~templating~~
- - dockerize it
- - add SSL support
+## building
+To build the docker image run:
+```
+npm install
+docker build -t cloud-config-server .
+```
+
+# docker
+The up-to-date image for this project is hosted on docker hub.
+
+To retrieve the image and run it:
+```
+docker run -d -P auguster/cloud-config-server
+```
+This will run the image with the working example. To provide your own templates you can mount the `data/` folder on your host:
+```
+docker run -d -p 8080 -v $PWD/data:/data:ro auguster/cloud-config-server
+```
  
 # LICENCE
 The MIT License (MIT)
