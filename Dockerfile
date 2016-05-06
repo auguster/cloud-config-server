@@ -2,10 +2,9 @@ FROM node:onbuild
 MAINTAINER Rémi AUGUSTE <remi.auguste@gmail.com>
 
 ADD ./data /
-ADD ./index.js /var/nodejs/
-ADD ./node_modules /var/nodejs/node_modules/
-RUN ln -s /data /var/nodejs/data
-WORKDIR /var/nodejs
-CMD node index.js
+ADD ./server.js /usr/src/app
+ADD ./package.json /usr/src/app
+RUN rm -rf /usr/src/app/data
+RUN ln -s /data /usr/src/app
 
 EXPOSE 8080
