@@ -1,5 +1,5 @@
 # Note
-To be process by EJS, the template file should bear the `.ejs` extension.
+To be processed by EJS, the template file should bear the `.ejs` extension.
 
 # Working example
 This working examples showcases the power of templating.
@@ -16,6 +16,7 @@ All cloud config file yould start with `#cloud-config`.
 ```
 Sets the default values for `host` and `domain` if they're not present in the URL.
 The `-%>` removes the creation of new lines in the output.
+`'.' + domain` adds a dot in front of the domain to facilitate URL creation (e.g. `host.domain`).
 
 ```
 hostname: "<%= host %><%= domain %>"
