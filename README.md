@@ -15,7 +15,7 @@ The cloud-config files should be stored in the `data/` folder of the application
 ## templating
 This server uses [EJS](http://ejs.co) for file templating. This allows code factoring (through includes), variables, dynamic scripting...
 
-Here is a [working example](tree/master/data) of what you can do:
+Here is a [working example](data) of what you can do:
 ```
 #cloud-config
 <% var host = host || 'host' -%>
