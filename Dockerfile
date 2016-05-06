@@ -1,4 +1,4 @@
-FROM node
+FROM node:onbuild
 MAINTAINER Rémi AUGUSTE <remi.auguste@gmail.com>
 
 ADD ./data /
