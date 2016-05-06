@@ -1,0 +1,27 @@
+{
+  "name": "cloud-config-server",
+  "version": "1.0.0",
+  "description": "Cloud-config server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auguster/cloud-config-server.git"
+  },
+  "keywords": [
+    "cloud-config",
+    "coreos",
+    "user_data"
+  ],
+  "author": "Rémi AUGUSTE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/auguster/cloud-config-server/issues"
+  },
+  "homepage": "https://github.com/auguster/cloud-config-server#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
