@@ -53,6 +53,13 @@ This will run the image with the working example. To provide your own templates 
 ```
 docker run -d -p 8080 -v $PWD/data:/data:ro auguster/cloud-config-server
 ```
+
+# Usage
+To boot a cloud-config compatible instance you have to make it point to the cloud-config-server.
+## PXE
+With PXE this can be done by writing the URL on the kernel command line. An example is avaible on the documentation about [Booting CoreOS via PXE](https://coreos.com/os/docs/latest/booting-with-pxe.html).
+
+To enable the internal TFTP in libvirt / virt manager, you can follow [this nice tutorial](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Virtualization_Host_Configuration_and_Guest_Installation_Guide/chap-Virtualization_Host_Configuration_and_Guest_Installation_Guide-Libvirt_network_booting.html).
  
 # LICENCE
 The MIT License (MIT)
