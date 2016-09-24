@@ -1,4 +1,5 @@
-# cloud-config-server
+# cloud-config-server [![](https://images.microbadger.com/badges/image/auguster/cloud-config-server.svg)](https://microbadger.com/images/auguster/cloud-config-server)
+
 Docker NodeJS server providing cloud-config to Cloud instances using [EJS](http://ejs.co) template language
 
 # User manual
